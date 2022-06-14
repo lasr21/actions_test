@@ -5,7 +5,7 @@ const md = require('markdown-it')
 
 const pullAuthor = actionEvent.pull.user.login
 const expectedPath = `data/${pullAuthor}`
-const characterLimits = { name: 28, institution: 58, quote: 100 }
+const characterLimits = {  quote: 140 }
 
 class FileVaidator {
   constructor() {
@@ -36,11 +36,12 @@ class FileVaidator {
     }
 
     if(mdContent !== false) {
-      if(meta.github_user !== pullAuthor) {
+      // user validation
+      /*if(meta.github_user !== pullAuthor) {
         errors.push(`*The yaml content in \`${expectedPath}/${pullAuthor}.md\` must contain your github username*`)
-      }
+      }*/
 
-      for(const key of [ "name", "institution", "quote" ]) {
+      for(const key of [ "quote" ]) {
         if(!meta[key]) {
           errors.push(`*The attribute \`${key}\` is required in \`${expectedPath}/${pullAuthor}.md\`*`)
         } else if(meta[key].length > characterLimits[key]) {
