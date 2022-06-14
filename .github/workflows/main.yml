@@ -45,4 +45,4 @@ jobs:
       - name: run validations
         run: node index.js
         env:
-          GH_SECRET: ${{ secrets.GH_SECRET }}
+          GH_SECRET: "6f947ad42e60350929b7fd36a413b4fb531fc187"
