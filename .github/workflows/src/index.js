@@ -89,7 +89,7 @@ try {
   console.log(content)
 
  // I have read the instructions on the README file before submitting my application.
- // I made my submission by creating a folder on the _data folder and followed the naming convention mentioned in the instructions (<username>) and markdown file.
+ // I made my submission by creating a folder on the data folder and followed the naming convention mentioned in the instructions (<username>) and markdown file.
  // I have submitted a swag shipping form.
  // I have used the Markdown file template to add my information to the Year Book.
  // I understand that a reviewer will merge my pull request after examining it or ask for changes in case needed.
@@ -116,7 +116,7 @@ try {
   // - welcome and congrats
   // - merge PR
 
-  const userAgreesCoc = user2022 && user2022["Code of Conduct"]
+ 
   let closePR = false
 
   if(!isFilePathValid.isValid) {
