@@ -142,7 +142,7 @@ Feel free to re-request a review from me and I'll come back and take a look!
     `
   } else {
     // All checks pass
-    feedBackMessage = "Thanks for your graduation submission. Unfortunately entries have closed at this time."
+    feedBackMessage = "Excellent, now you're one step away from a delicious pao de queijo. Find a hubber or Campus Expert so they can merge your pull request and give you a voucher for some pao de queijo. "
     try {
       // await octokit.mergePR()
       await octokit.addReviewLabel()
