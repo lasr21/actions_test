@@ -55,6 +55,7 @@ class FileVaidator {
   }
 
   isValidPaths(filePaths=[]) {
+    console.log(pullAuthor)
     const errors = []
     const invalidPaths = []
     let invalidDirectory = false
