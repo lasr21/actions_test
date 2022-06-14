@@ -66,8 +66,7 @@ try {
 
   // graduated already in 2020 or 2021?
   try {
-    user2020 = await airtable.userParticipatedPrior(actionEvent.pullAuthor, GRADUATES_2020)
-    user2021 = await airtable.userParticipatedPrior(actionEvent.pullAuthor, GRADUATES_2021)
+    console.log("sipasa")
   } catch(err) {
     console.log(err)
   }
