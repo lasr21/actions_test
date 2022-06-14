@@ -66,7 +66,9 @@ try {
 
 
   // Has the user completed the shipping form? (address must exist for the form to be submitted)
-
+  const fileNames = pull.files.edges.map((file)=>{
+    return file.node.path
+  })
 
   let isMarkdownValid = {}
   let content
