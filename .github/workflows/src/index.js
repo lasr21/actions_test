@@ -50,12 +50,12 @@ try {
   if(actionEvent.name === "review_requested" && actionEvent.requestedReviewer.login !== BOT_ACCOUNT_LOGIN) {
     return true
   }
-
+ /*
   try {
     pull = await octokit.fetchPr(actionEvent.pullNumber)
   }catch(err) {
     console.log(err)
-  }
+  } */
 
     // checks
 
