@@ -4,7 +4,7 @@ const yaml = require('yaml')
 const md = require('markdown-it')
 
 const pullAuthor = actionEvent.pull.user.login
-const expectedPath = `_data/${pullAuthor}`
+const expectedPath = `data/${pullAuthor}`
 const characterLimits = { name: 28, institution: 58, quote: 100 }
 
 class FileVaidator {
