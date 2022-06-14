@@ -45,7 +45,7 @@ try {
 
   const feedback = []
 
-  let pull, user2021, user2020, user2022, hasSdp
+  let pull
 
   if(actionEvent.name === "review_requested" && actionEvent.requestedReviewer.login !== BOT_ACCOUNT_LOGIN) {
     return true
@@ -72,10 +72,11 @@ try {
 
   let isMarkdownValid = {}
   let content
+
   const isFilePathValid = fileValidator.isValidPaths(fileNames)
 
   try {
-    content = isFilePathValid.isValid && await octokit.getContent(`_data/${actionEvent.pullAuthor}/${actionEvent.pullAuthor}.md`)
+    content = isFilePathValid.isValid && await octokit.getContent(`data/${actionEvent.pullAuthor}/${actionEvent.pullAuthor}.md`)
   } catch(err) {
     feedback.push("I was unable to view the content of the markdown file, please try again in a few minutes")
     console.log(err)
