@@ -32,7 +32,8 @@ const octokit = require('./app/octokit.js');
 const actionEvent = require('./app/action-event.js');
 const fileValidator = require('./app/file-validator.js');
 
-const BOT_ACCOUNT_LOGIN = "github-education"
+//const BOT_ACCOUNT_LOGIN = "github-education"
+const BOT_ACCOUNT_LOGIN = "lasr21"
 
 const GRADUATES_2020 = "Graduation 2020"
 const GRADUATES_2021 = "Graduation 2021"
@@ -57,7 +58,8 @@ try {
   }
 
   try {
-    user2022 = await airtable.fetchGraduate(actionEvent.pullAuthor, GRADUATES_2022)
+    console.log("errrorcito")
+    //user2022 = await airtable.fetchGraduate(actionEvent.pullAuthor, GRADUATES_2022)
   } catch(err) {
     console.log(err)
   }
