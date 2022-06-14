@@ -30,7 +30,6 @@ if(!process.env.GITHUB_ACTIONS) {
 const airtable = require('./app/airtable.js');
 const octokit = require('./app/octokit.js');
 const actionEvent = require('./app/action-event.js');
-const educationWeb = require('./app/education-web.js');
 const fileValidator = require('./app/file-validator.js');
 
 const BOT_ACCOUNT_LOGIN = "github-education"
@@ -73,12 +72,6 @@ try {
     console.log(err)
   }
 
-  // approved for the student/teacher development pack
-  try {
-    hasSdp = await educationWeb.hasPack(actionEvent.pullAuthor)
-  } catch(err) {
-    console.log(err)
-  }
 
   // Has the user completed the shipping form? (address must exist for the form to be submitted)
   const completedShippingForm = user2022 && user2022["Address Line 1"].length > 0
