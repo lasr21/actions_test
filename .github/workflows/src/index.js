@@ -27,6 +27,9 @@ if(!process.env.GITHUB_ACTIONS) {
   }
 }
 
+
+/*
+
 const airtable = require('./app/airtable.js');
 const octokit = require('./app/octokit.js');
 const actionEvent = require('./app/action-event.js');
