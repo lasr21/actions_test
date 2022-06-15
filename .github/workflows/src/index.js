@@ -33,7 +33,7 @@ const fileValidator = require('./app/file-validator.js');
 const pass = process.env.repo-token
 const BOT_ACCOUNT_LOGIN = "github-education"
 
-
+console.log(pass)
 
 try {
 ;(async ()=>{
