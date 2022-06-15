@@ -158,7 +158,7 @@ Feel free to re-request a review from me and I'll come back and take a look!
   try {
     await octokit.createReview(`
 **Hi ${ actionEvent.pullAuthor },**
-**Welcome to graduation!**
+**Welcome to Campus Party !**
 
 ${ feedBackMessage }
 `, feedback.length ? "REQUEST_CHANGES" : "APPROVE")
