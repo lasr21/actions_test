@@ -30,10 +30,10 @@ if(!process.env.GITHUB_ACTIONS) {
 const octokit = require('./app/octokit.js');
 const actionEvent = require('./app/action-event.js');
 const fileValidator = require('./app/file-validator.js');
-const pass = process.env.repo-token
+
 const BOT_ACCOUNT_LOGIN = "github-education"
 
-console.log(pass)
+
 
 try {
 ;(async ()=>{
@@ -113,7 +113,7 @@ function run() {
                 throw new Error('Action must have at least one of issue-message or pr-message set');
             }
             // Get client and context 123
-            const client = new github.GitHub(pass,{ required: true });
+            const client = new github.GitHub(process.env.repo-token,{ required: true });
             const context = github.context;
             if (context.payload.action !== 'opened') {
                 console.log('No issue or PR was opened, skipping');
