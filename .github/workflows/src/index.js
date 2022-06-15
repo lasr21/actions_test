@@ -37,6 +37,7 @@ const BOT_ACCOUNT_LOGIN = "github-education"
 
 const fs = require('fs');
 const feedback = []
+let feedBackMessage = ""
 
 fs.readFile(authors, function (err, data) {
   if (err) throw err;
@@ -133,7 +134,7 @@ fs.readFile(authors, function (err, data) {
         }
         
       
-        let feedBackMessage = ""
+        
         if(closePR) {
           feedBackMessage = "I'm really sorry! It looks like you've already graduated in a previous year. This is for first time grads!"
         } else if(feedback.length) {
