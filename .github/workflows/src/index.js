@@ -36,7 +36,7 @@ const author = actionEvent.pullAuthor
 const BOT_ACCOUNT_LOGIN = "github-education"
 
 const fs = require('fs');
-
+/*
 fs.readFile(authors, 'utf8', (err, data) => {
   if (err) {
     console.error(err);
@@ -46,10 +46,10 @@ fs.readFile(authors, 'utf8', (err, data) => {
 });
 
 console.log(author)
-
+*/
 fs.readFile(authors, function (err, data) {
   if (err) throw err;
-  if(data.includes('author')){
+  if(data.includes(author)){
    console.log("lo ecnontre kachau wey")
   }
 });
