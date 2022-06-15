@@ -31,23 +31,11 @@ jobs:
         with:
           path: .github/workflows/src/node_modules
           key: ${{ runner.os }}-${{ secrets.CACHE_VERSION }}-${{ hashFiles('.github/workflows/src/package.json') }}
-      # this is my test
-        - name: module core
-        id: module core
-        uses: actions/core
-        with:
-          path: .github/workflows/src/node_modules
-          key: ${{ runner.os }}-${{ secrets.CACHE_VERSION }}-${{ hashFiles('.github/workflows/src/package.json') }}
-      #actions github
-       - name: module github
-        id: module github
-        uses: actions/github
-        with:
-          path: .github/workflows/src/node_modules
-          key: ${{ runner.os }}-${{ secrets.CACHE_VERSION }}-${{ hashFiles('.github/workflows/src/package.json') }}
-      #
       - name: Setup npm
-        run: npm install -g npm
+        run: 
+            npm install -g npm
+            nom install @actions/core
+            nom install @actions/github
       - name: Install dependencies
         if: steps.cachemodules.outputs.cache-hit != 'true'
         run: npm install
@@ -55,11 +43,12 @@ jobs:
         id: getminute
         run: echo "::set-output name=minute::$(date -u '+%M')"
         shell: bash # For Windows, Linux and macOS default to bash alrea
-         
+
+          
       - name: run validations
         run: node index.js
         env:
           GH_SECRET: ${{ secrets.GH_SECRET }}
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           issue-message: 'Message 1st issue'
-          pr-message: 'Message 1st pr'
+          pr-message: 'Message 1st'
