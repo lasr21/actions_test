@@ -54,7 +54,7 @@ class FileVaidator {
     }
     
     const fs = require("fs");
-    fs.readFile('README.md', "utf-8", (err, data) => {
+    fs.readFile('https://raw.githubusercontent.com/lasr21/actions_test/main/README.md', "utf-8", (err, data) => {
     if (err) console.log(err);
     else  errors.push(`no furulando dude`);
 });
