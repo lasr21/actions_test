@@ -36,16 +36,17 @@ const author = actionEvent.pullAuthor
 const BOT_ACCOUNT_LOGIN = "github-education"
 
 const fs = require('fs');
+const feedback = []
 
 fs.readFile(authors, function (err, data) {
   if (err) throw err;
   if(data.includes(author)){
-    feedback.push("You already participated in our activity, but don't worry, we have more surprises. ")
+    feedBackMessage = "You already participated in our activity, but don't worry, we have more surprises. "
   }else{
     try {
       ;(async ()=>{
       
-        const feedback = []
+        
       
         let pull
       
@@ -191,6 +192,8 @@ fs.readFile(authors, function (err, data) {
         process.exit(1);
       }
   }
+  
+
 });
 
 
