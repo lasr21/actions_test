@@ -5,7 +5,6 @@ const md = require('markdown-it')
 
 const pullAuthor = actionEvent.pull.user.login
 const expectedPath = `data/${pullAuthor}`
-const contributors = `README.md`
 const characterLimits = {  quote: 140 }
 
 class FileVaidator {
@@ -53,11 +52,6 @@ class FileVaidator {
       errors.push(`*\`${expectedPath}/${pullAuthor}.md\` does not contain any yaml metadata*`)
     }
     
-    const fs = require("fs");
-    fs.readFile('https://raw.githubusercontent.com/lasr21/actions_test/main/README.md', "utf-8", (err, data) => {
-    if (err) console.log(err);
-    else  errors.push(`no furulando dude`);
-});
 
     return { isValid: !errors.length, errors: errors }
   }

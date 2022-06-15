@@ -31,10 +31,18 @@ if(!process.env.GITHUB_ACTIONS) {
 const octokit = require('./app/octokit.js');
 const actionEvent = require('./app/action-event.js');
 const fileValidator = require('./app/file-validator.js');
-
+const authors = ('../../../README.md');
 const BOT_ACCOUNT_LOGIN = "github-education"
 
+const fs = require('fs');
 
+fs.readFile(authors, 'utf8', (err, data) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log(data);
+});
 
 try {
 ;(async ()=>{
