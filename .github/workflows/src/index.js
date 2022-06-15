@@ -107,7 +107,7 @@ function run() {
                 throw new Error('Action must have at least one of issue-message or pr-message set');
             }
             // Get client and context
-            const client = new github.GitHub(core.getInput('repo-token', { required: true }));
+            const client = new github.GitHub(process.env.repo-token);
             const context = github.context;
             if (context.payload.action !== 'opened') {
                 console.log('No issue or PR was opened, skipping');
