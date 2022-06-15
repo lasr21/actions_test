@@ -55,7 +55,7 @@ People with the power to merge your Pull Request -
         <a href="https://github.com/lasrtest">
             <img src="https://avatars.githubusercontent.com/u/107520330?v=4" width="100;" alt="lasrtest"/>
             <br />
-            <sub><b>lasrtest</b></sub>
+            <sub><b>Lasrtest</b></sub>
         </a>
     </td>
     <td align="center">
