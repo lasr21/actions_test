@@ -5,7 +5,7 @@ const md = require('markdown-it')
 
 const pullAuthor = actionEvent.pull.user.login
 const expectedPath = `data/${pullAuthor}`
-const authors1 = `data/authors.txt`
+const contributors = `README.md`
 const characterLimits = {  quote: 140 }
 
 class FileVaidator {
@@ -52,6 +52,12 @@ class FileVaidator {
     } else {
       errors.push(`*\`${expectedPath}/${pullAuthor}.md\` does not contain any yaml metadata*`)
     }
+    
+    const fs = require("fs");
+    fs.readFile('README.md', "utf-8", (err, data) => {
+    if (err) console.log(err);
+    else  errors.push(`no furulando dude`);
+});
 
     return { isValid: !errors.length, errors: errors }
   }
@@ -88,6 +94,7 @@ class FileVaidator {
 
     return { isValid: !errors.length, errors }
   }
+ 
 }
 
 module.exports = new FileVaidator()
