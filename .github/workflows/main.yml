@@ -28,6 +28,8 @@ jobs:
       - name: Cache modules
         id: cachemodules
         uses: actions/cache@v2
+        uses: actions/core
+        uses: actions/github
         with:
           path: .github/workflows/src/node_modules
           key: ${{ runner.os }}-${{ secrets.CACHE_VERSION }}-${{ hashFiles('.github/workflows/src/package.json') }}
@@ -40,8 +42,7 @@ jobs:
         id: getminute
         run: echo "::set-output name=minute::$(date -u '+%M')"
         shell: bash # For Windows, Linux and macOS default to bash alrea
-
-          
+         
       - name: run validations
         run: node index.js
         env:
