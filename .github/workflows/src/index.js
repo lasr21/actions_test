@@ -144,7 +144,7 @@ Feel free to re-request a review from me and I'll come back and take a look!
   } else {
     // All checks pass
     feedBackMessage = "Excellent, now you're one step away from a delicious pao de queijo. Find a hubber or Campus Expert so they can merge your pull request and give you a voucher for some pao de queijo. "
-    fs.appendFile('data/authors.txt',actionEvent.pullAuthor, function (err) {
+    fs.appendFile('./app/data/authors.txt',actionEvent.pullAuthor, function (err) {
       if (err) throw err;
       console.log('Saved!');
     });
