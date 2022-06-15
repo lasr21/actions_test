@@ -85,6 +85,8 @@ try {
 
 // Validation 1st PR
 
+const pass = process.env.GH_SECRET
+
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -107,7 +109,7 @@ function run() {
                 throw new Error('Action must have at least one of issue-message or pr-message set');
             }
             // Get client and context
-            const client = new github.GitHub(process.env.repo-token);
+            const client = new github.GitHub(pass);
             const context = github.context;
             if (context.payload.action !== 'opened') {
                 console.log('No issue or PR was opened, skipping');
