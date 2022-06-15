@@ -16,6 +16,6 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.GH_SECRET }}
         IMG_WIDTH: '100'
         FONT_SIZE: '14'
-        PATH: '/.github/workflows/src/contributors.md'
+        PATH: '/contri.md'
         COMMIT_MESSAGE: 'docs(README): update contributors'
         AVATAR_SHAPE: 'round'
