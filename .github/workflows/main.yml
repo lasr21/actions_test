@@ -47,3 +47,5 @@ jobs:
         env:
           GH_SECRET: ${{ secrets.GH_SECRET }}
           repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: 'Message 1st issue'
+          pr-message: 'Message 1st pr'
