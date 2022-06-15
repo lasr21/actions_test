@@ -44,5 +44,5 @@ People with the power to merge your Pull Request -
 ## Winners
 <!-- readme: <lasr21/->,contributors -start -->
 
-<!-- readme: contributors -end -->
+<!-- readme: <lasr21/->,contributors -end -->
 
