@@ -42,7 +42,7 @@ People with the power to merge your Pull Request -
   
 
 ## Winners
-<!-- readme: contributors -start -->
+<!-- readme: lasr21/-,contributors -start -->
 <table>
 <tr>
     <td align="center">
@@ -67,5 +67,5 @@ People with the power to merge your Pull Request -
         </a>
     </td></tr>
 </table>
-<!-- readme: contributors -end -->
+<!-- readme: lasr21/-,contributors -end -->
 
