@@ -40,11 +40,9 @@ jobs:
         id: getminute
         run: echo "::set-output name=minute::$(date -u '+%M')"
         shell: bash # For Windows, Linux and macOS default to bash alrea
-      - name: run entry point
+
+          
+      - name: run validations
         run: node index.js
         env:
-
           GH_SECRET: ${{ secrets.GH_SECRET }}
-          EDUCATION_WEB_KEY: ${{ secrets.EDUCATION_WEB_KEY }}
-          EDUCATION_WEB_SECRET: ${{ secrets.EDUCATION_WEB_SECRET }}
-          EDUCATION_WEB_API: ${{ secrets.EDUCATION_WEB_API }}
