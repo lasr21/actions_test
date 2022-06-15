@@ -41,7 +41,8 @@ People with the power to merge your Pull Request -
   - [ ] Post a photo with your Pao de queijo and tag @GitHubEducation
   
 
-<!-- readme: contributors -start -->
+## Winners
+<!-- readme: <lasr21/>,contributors -start -->
 <table>
 <tr>
     <td align="center">
