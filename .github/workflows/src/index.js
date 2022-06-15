@@ -118,6 +118,8 @@ try {
     if(data.includes(author)){
      console.log("lo ecnontre kachau wey")
      let closePR = true
+     feedBackMessage = "I'm really sorry! It looks like you've already participaed in this activity"
+     feedback.push("oh oh we have a problem")
     }
   });
  
