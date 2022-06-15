@@ -43,6 +43,29 @@ People with the power to merge your Pull Request -
 
 ## Winners
 <!-- readme: lasr21/,contributors -start -->
-
+<table>
+<tr>
+    <td align="center">
+        <a href="https://github.com/lasr21">
+            <img src="https://avatars.githubusercontent.com/u/562146?v=4" width="100;" alt="lasr21"/>
+            <br />
+            <sub><b>Lasr21</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/lasrtest">
+            <img src="https://avatars.githubusercontent.com/u/107520330?v=4" width="100;" alt="lasrtest"/>
+            <br />
+            <sub><b>lasrtest</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/FlorIBG">
+            <img src="https://avatars.githubusercontent.com/u/20422770?v=4" width="100;" alt="FlorIBG"/>
+            <br />
+            <sub><b>Flor Ivonne Baños Gaspar</b></sub>
+        </a>
+    </td></tr>
+</table>
 <!-- readme: lasr21/,contributors -end -->
 
