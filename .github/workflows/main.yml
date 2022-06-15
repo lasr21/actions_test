@@ -28,11 +28,24 @@ jobs:
       - name: Cache modules
         id: cachemodules
         uses: actions/cache@v2
+        with:
+          path: .github/workflows/src/node_modules
+          key: ${{ runner.os }}-${{ secrets.CACHE_VERSION }}-${{ hashFiles('.github/workflows/src/package.json') }}
+      # this is my test
+        - name: module core
+        id: module core
         uses: actions/core
+        with:
+          path: .github/workflows/src/node_modules
+          key: ${{ runner.os }}-${{ secrets.CACHE_VERSION }}-${{ hashFiles('.github/workflows/src/package.json') }}
+      #actions github
+       - name: module github
+        id: module github
         uses: actions/github
         with:
           path: .github/workflows/src/node_modules
           key: ${{ runner.os }}-${{ secrets.CACHE_VERSION }}-${{ hashFiles('.github/workflows/src/package.json') }}
+      #
       - name: Setup npm
         run: npm install -g npm
       - name: Install dependencies
