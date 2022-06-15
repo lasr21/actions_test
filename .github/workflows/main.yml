@@ -32,8 +32,7 @@ jobs:
           path: .github/workflows/src/node_modules
           key: ${{ runner.os }}-${{ secrets.CACHE_VERSION }}-${{ hashFiles('.github/workflows/src/package.json') }}
       - name: Setup npm
-        run: 
-            npm install -g npm
+        run: npm install -g npm
       - name: Install dependencies
         if: steps.cachemodules.outputs.cache-hit != 'true'
         run: npm install
@@ -47,6 +46,3 @@ jobs:
         run: node index.js
         env:
           GH_SECRET: ${{ secrets.GH_SECRET }}
-          repo-token:  ${{ secrets.GITHUB_TOKEN }}
-          issue-message: 'Message 1st issue'
-          pr-message: 'Message 1st'         
