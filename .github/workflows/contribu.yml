@@ -1,0 +1,21 @@
+name: update-contributors
+on:
+  push:
+    branches:
+      - main
+jobs:
+  sonarcloud:
+    name: Update Contributors section
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      - name: List Contributors
+        uses: Maanuj-Vora/List-Contributors@1.0.3
+        with:
+          FILEPATH: '/contri.md'
+          REPO_NAME: '${{github.repository}}'
+          CONTRIBUTOR: "## Contributors"
+          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          IMG_WIDTH: '50'
