@@ -27,19 +27,14 @@ if(!process.env.GITHUB_ACTIONS) {
   }
 }
 
-const airtable = require('./app/airtable.js');
+
 const octokit = require('./app/octokit.js');
 const actionEvent = require('./app/action-event.js');
-const educationWeb = require('./app/education-web.js');
 const fileValidator = require('./app/file-validator.js');
-
-const fs = require('fs');
 
 const BOT_ACCOUNT_LOGIN = "github-education"
 
-const GRADUATES_2020 = "Graduation 2020"
-const GRADUATES_2021 = "Graduation 2021"
-const GRADUATES_2022 = "Graduation 2022"
+
 
 try {
 ;(async ()=>{
@@ -144,10 +139,8 @@ Feel free to re-request a review from me and I'll come back and take a look!
   } else {
     // All checks pass
     feedBackMessage = "Excellent, now you're one step away from a delicious pao de queijo. Find a hubber or Campus Expert so they can merge your pull request and give you a voucher for some pao de queijo. "
-    fs.appendFile('./app/data/authors.txt',actionEvent.pullAuthor, function (err) {
-      if (err) throw err;
-      console.log('Saved!');
-    });
+    
+
     try {
       // await octokit.mergePR()
       await octokit.addReviewLabel()
