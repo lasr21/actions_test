@@ -32,6 +32,7 @@ const octokit = require('./app/octokit.js');
 const actionEvent = require('./app/action-event.js');
 const fileValidator = require('./app/file-validator.js');
 const authors = ('../../../README.md');
+const author = actionEvent.pullAuthor
 const BOT_ACCOUNT_LOGIN = "github-education"
 
 const fs = require('fs');
@@ -42,6 +43,15 @@ fs.readFile(authors, 'utf8', (err, data) => {
     return;
   }
   console.log(data);
+});
+
+console.log(author)
+
+fs.readFile(authors, function (err, data) {
+  if (err) throw err;
+  if(data.includes('author')){
+   console.log("lo ecnontre kachau wey")
+  }
 });
 
 try {
