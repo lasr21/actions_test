@@ -41,7 +41,7 @@ People with the power to merge your Pull Request -
   - [ ] Post a photo with your Pao de queijo and tag @GitHubEducation
   
 
-<!-- readme: contributors -start -->
+<!-- readme: <FlorIBG/-><lasr21/->,,contributors -start -->
 
 ##  Winners 🙌🙌
 
