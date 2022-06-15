@@ -94,21 +94,15 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
-    result["default"] = mod;
-    return result;
-};
+
 Object.defineProperty(exports, "__esModule", { value: true });
-const core = __importStar(require("@actions/core"));
-const github = __importStar(require("@actions/github"));
+const core = require("@actions/core");
+const github = require("@actions/github");
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const issueMessage = core.getInput('issue-message');
-            const prMessage = core.getInput('pr-message');
+            const issueMessage = "I'm a message issue";
+            const prMessage = "Also I'm a message pr";
             if (!issueMessage && !prMessage) {
                 throw new Error('Action must have at least one of issue-message or pr-message set');
             }
