@@ -34,8 +34,6 @@ jobs:
       - name: Setup npm
         run: 
             npm install -g npm
-            nom install @actions/core
-            nom install @actions/github
       - name: Install dependencies
         if: steps.cachemodules.outputs.cache-hit != 'true'
         run: npm install
