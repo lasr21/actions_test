@@ -43,6 +43,15 @@ People with the power to merge your Pull Request -
 
 ## Winners
 <!-- readme: contributors,lasr21/-,lasrtest/- -start -->
-
+<table>
+<tr>
+    <td align="center">
+        <a href="https://github.com/FlorIBG">
+            <img src="https://avatars.githubusercontent.com/u/20422770?v=4" width="100;" alt="FlorIBG"/>
+            <br />
+            <sub><b>Flor Ivonne Baños Gaspar</b></sub>
+        </a>
+    </td></tr>
+</table>
 <!-- readme: contributors,lasr21/-,lasrtest/- -end -->
 
