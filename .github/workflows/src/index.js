@@ -115,18 +115,13 @@ try {
   // - welcome and congrats
   // - merge PR
   let closePR = false
+
   fs.readFile(authors, function (err, data) {
     if (err) throw err;
     if(data.includes(author)){
      feedBackMessage = "I'm really sorry! It looks like you've already participaed in this activity"
      feedback.push("oh oh we have a problem")
-     try {
-      await octokit.addClosedLabel()
-      await octokit.closePR()
-      }catch(err) {
-      console.log("failed to close PR")
-      console.log(err)
-    }
+     closePR = true
     }
   });
  
@@ -144,8 +139,8 @@ try {
   
 
   let feedBackMessage = ""
-  if(closePR) {
-    feedBackMessage = "I'm really sorry! It looks like you've already participaed in this activity"
+  if(closePR == true) {
+    feedBackMessage = "I'm really sorry!"
   } else if(feedback.length) {
     feedBackMessage = `
 ### I have a few items I need you to take care of before I can merge this PR:\n
