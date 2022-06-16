@@ -5,6 +5,7 @@ const md = require('markdown-it')
 
 const pullAuthor = actionEvent.pull.user.login
 const expectedPath = `data`
+const authors1 = `data/authors.txt`
 const characterLimits = {  quote: 280 }
 
 class FileVaidator {
@@ -51,7 +52,6 @@ class FileVaidator {
     } else {
       errors.push(`*\`${expectedPath}/${pullAuthor}.md\` does not contain any yaml metadata*`)
     }
-    
 
     return { isValid: !errors.length, errors: errors }
   }
@@ -88,7 +88,6 @@ class FileVaidator {
 
     return { isValid: !errors.length, errors }
   }
- 
 }
 
 module.exports = new FileVaidator()
