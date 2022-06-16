@@ -64,6 +64,8 @@ try {
 
   // Has the user completed the shipping form? (address must exist for the form to be submitted)
   const fileNames = pull.files.edges.map((file)=>{
+    console.log = "mira aca"
+    console.log = file.node.path
     return file.node.path
   })
 
